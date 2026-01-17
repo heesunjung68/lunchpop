@@ -75,8 +75,8 @@ lotto-ball {
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px; /* Make it an oval */
+    padding: 10px 25px; /* Increased padding for longer text */
+    border-radius: 20px; /* Keep it oval */
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -95,6 +95,7 @@ lotto-ball {
     transform: translateY(100%);
     font-size: 1rem;
     font-weight: bold;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 body:not(.dark-mode) #theme-toggle .light-icon {
