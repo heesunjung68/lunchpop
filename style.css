@@ -75,7 +75,7 @@ lotto-ball {
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     border: none;
-    padding: 10px 25px; /* Increased padding for longer text */
+    padding: 10px 30px; /* Increased padding for longer text */
     border-radius: 20px; /* Keep it oval */
     cursor: pointer;
     transition: all 0.3s ease;
