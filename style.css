@@ -73,20 +73,18 @@ lotto-ball {
     top: 1rem;
     right: 1rem;
     background-color: var(--button-bg-color);
-    color: var(--button-text-color);
     border: none;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    width: 40px; /* Adjust size for icons */
-    height: 40px; /* Adjust size for icons */
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    overflow: hidden; /* Hide overflowing icon during transition */
+    overflow: hidden;
 }
 
 #theme-toggle .icon {
@@ -95,6 +93,50 @@ lotto-ball {
     opacity: 0;
     transform: translateY(100%);
 }
+
+/* Sun Illustration */
+.light-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow: 0 0 10px yellow;
+}
+
+.light-icon::before,
+.light-icon::after {
+    content: '';
+    position: absolute;
+    background-color: yellow;
+    border-radius: 2px;
+}
+
+.light-icon::before {
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.light-icon::after {
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Moon Illustration */
+.dark-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: -4px 2px 0 0 white;
+}
+
 
 body:not(.dark-mode) #theme-toggle .light-icon {
     opacity: 1;
