@@ -48,5 +48,4 @@ This project is a simple, single-page web application that recommends a random d
     *   **[Completed]** Added `<base>` tag to `index.html`.
     *   **[Completed]** Updated `blueprint.md`.
     *   **[Completed]** Re-deploy to GitHub Pages.
-    *   **[In Progress]** Commit changes (index.html, blueprint.md).
-    *   **[In Progress]** Instruct User to replace `YOUR_REPOSITORY_NAME`.
+10. **[In Progress]** Commit final changes (index.html, blueprint.md).
