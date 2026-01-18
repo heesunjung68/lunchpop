@@ -1,26 +1,26 @@
 // main.js
 
 const foodItems = [
-    { name: "Pizza", image: "https://placehold.co/400x300?text=Pizza" },
-    { name: "Burger", image: "https://placehold.co/400x300?text=Burger" },
-    { name: "Pasta", image: "https://placehold.co/400x300?text=Pasta" },
-    { name: "Sushi", image: "https://placehold.co/400x300?text=Sushi" },
-    { name: "Steak", image: "https://placehold.co/400x300?text=Steak" },
-    { name: "Tacos", image: "https://placehold.co/400x300?text=Tacos" },
-    { name: "Salad", image: "https://placehold.co/400x300?text=Salad" },
-    { name: "Ramen", image: "https://placehold.co/400x300?text=Ramen" },
-    { name: "Fried Chicken", image: "https://placehold.co/400x300?text=Fried+Chicken" },
-    { name: "Curry", image: "https://placehold.co/400x300?text=Curry" },
-    { name: "Pho", image: "https://placehold.co/400x300?text=Pho" },
-    { name: "Bibimbap", image: "https://placehold.co/400x300?text=Bibimbap" },
-    { name: "Paella", image: "https://placehold.co/400x300?text=Paella" },
-    { name: "Fish and Chips", image: "https://placehold.co/400x300?text=Fish+and+Chips" },
-    { name: "Dumplings", image: "https://placehold.co/400x300?text=Dumplings" },
-    { name: "Soup", image: "https://placehold.co/400x300?text=Soup" },
-    { name: "Sandwich", image: "https://placehold.co/400x300?text=Sandwich" },
-    { name: "Pancakes", image: "https://placehold.co/400x300?text=Pancakes" },
-    { name: "BBQ Ribs", image: "https://placehold.co/400x300?text=BBQ+Ribs" },
-    { name: "Burrito", image: "https://placehold.co/400x300?text=Burrito" }
+    { name: "Pizza", image: "./images/pizza.jpg" },
+    { name: "Burger", image: "./images/burger.jpg" },
+    { name: "Pasta", image: "./images/pasta.jpg" },
+    { name: "Sushi", image: "./images/sushi.jpg" },
+    { name: "Steak", image: "./images/steak.jpg" },
+    { name: "Tacos", image: "./images/tacos.jpg" },
+    { name: "Salad", image: "./images/salad.jpg" },
+    { name: "Ramen", image: "./images/ramen.jpg" },
+    { name: "Fried Chicken", image: "./images/fried_chicken.jpg" },
+    { name: "Curry", image: "./images/curry.jpg" },
+    { name: "Pho", image: "./images/pho.jpg" },
+    { name: "Bibimbap", image: "./images/bibimbap.jpg" },
+    { name: "Paella", image: "./images/paella.jpg" },
+    { name: "Fish and Chips", image: "./images/fish_and_chips.jpg" },
+    { name: "Dumplings", image: "./images/dumplings.jpg" },
+    { name: "Soup", image: "./images/soup.jpg" },
+    { name: "Sandwich", image: "./images/sandwich.jpg" },
+    { name: "Pancakes", image: "./images/pancakes.jpg" },
+    { name: "BBQ Ribs", image: "./images/bbq_ribs.jpg" },
+    { name: "Burrito", image: "./images/burrito.jpg" }
 ];
 
 function getRandomFood() {
