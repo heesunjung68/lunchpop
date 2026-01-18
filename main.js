@@ -47,16 +47,16 @@ class LunchMenu extends HTMLElement {
         this.shadowRoot.appendChild(wrapper);
 
         this.menus = [
-            { name: 'Bibimbap', image: '/lunch-menu-generator/images/bibimbap.jpg' },
-            { name: 'Paella', image: '/lunch-menu-generator/images/paella.jpg' },
-            { name: 'Pho', image: '/lunch-menu-generator/images/pho.jpg' },
-            { name: 'Fish and Chips', image: '/lunch-menu-generator/images/fish_and_chips.jpg' },
-            { name: 'Dumplings', image: '/lunch-menu-generator/images/dumplings.jpg' },
-            { name: 'Burrito', image: '/lunch-menu-generator/images/burrito.jpg' },
-            { name: 'Pancakes', image: '/lunch-menu-generator/images/pancakes.jpg' },
-            { name: 'BBQ Ribs', image: '/lunch-menu-generator/images/bbq_ribs.jpg' },
-            { name: 'Pizza', image: '/lunch-menu-generator/images/pizza.jpg' },
-            { name: 'Burger', image: '/lunch-menu-generator/images/burger.jpg' }
+            { name: 'Bibimbap', image: 'images/bibimbap.jpg' },
+            { name: 'Paella', image: 'images/paella.jpg' },
+            { name: 'Pho', image: 'images/pho.jpg' },
+            { name: 'Fish and Chips', image: 'images/fish_and_chips.jpg' },
+            { name: 'Dumplings', image: 'images/dumplings.jpg' },
+            { name: 'Burrito', image: 'images/burrito.jpg' },
+            { name: 'Pancakes', image: 'images/pancakes.jpg' },
+            { name: 'BBQ Ribs', image: 'images/bbq_ribs.jpg' },
+            { name: 'Pizza', image: 'images/pizza.jpg' },
+            { name: 'Burger', image: 'images/burger.jpg' }
         ];
     }
 
