@@ -6,6 +6,9 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
 }
 
 /* Header Styling */
@@ -27,55 +30,83 @@ header p {
     font-size: 1.2rem;
 }
 
-/* Main Container for Menu Items */
-#menu-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
-/* Individual Menu Item Styling */
-.menu-item {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+/* App Container for Dynamic Content */
+#app-container {
+    flex-grow: 1; /* Allow container to grow and push footer down */
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
     text-align: center;
-    transition: transform 0.2s;
 }
 
-.menu-item:hover {
-    transform: translateY(-5px);
-}
-
-.menu-item button {
+/* Recommend Button Styling */
+#recommend-button {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 15px 10px;
-    font-size: 1.2rem;
+    padding: 15px 30px;
+    font-size: 1.5rem;
     cursor: pointer;
-    transition: background-color 0.2s;
-    width: 100%; /* Ensure button takes full width of its container */
-    box-sizing: border-box; /* Include padding in width calculation */
-    margin-bottom: 0; /* Remove default button margin */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s, transform 0.2s;
+    margin-bottom: 30px; /* Space below the button */
 }
 
-.menu-item button:hover {
+#recommend-button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
-.menu-item img {
-    width: 100%; /* Image takes full width of its container */
+#recommend-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Display Area Styling */
+#menu-display {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    width: 100%;
+    max-width: 400px; /* Limit width of the display area */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    opacity: 0; /* Initially hidden, will fade in with JS */
+    transform: translateY(20px); /* Initially slightly below, will move up with JS */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#menu-display.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#menu-display h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: #333;
+}
+
+#menu-display img {
+    width: 90%; /* Image takes most of the width of its container */
+    max-width: 350px; /* Max width for consistency */
     aspect-ratio: 1 / 1; /* Ensures the image is square */
     object-fit: cover; /* Covers the area without distortion */
-    display: block; /* Remove extra space below image */
-    border-top: 1px solid #eee;
+    border-radius: 8px; /* Slightly rounded corners for the image */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#menu-display p {
+    font-size: 1.1rem;
+    color: #666;
 }
 
 /* Footer Styling */
@@ -84,17 +115,12 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 40px;
+    margin-top: auto; /* Push footer to the bottom */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    #menu-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding: 15px;
-    }
-
     header h1 {
         font-size: 2rem;
     }
@@ -103,15 +129,41 @@ footer {
         font-size: 1rem;
     }
 
-    .menu-item button {
-        font-size: 1rem;
-        padding: 12px 8px;
+    #recommend-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    #menu-display {
+        padding: 20px;
+        max-width: 350px;
+    }
+
+    #menu-display h2 {
+        font-size: 1.8rem;
     }
 }
 
 @media (max-width: 480px) {
-    #menu-container {
-        grid-template-columns: 1fr; /* Single column layout on very small screens */
-        padding: 10px;
+    #app-container {
+        padding: 15px;
+    }
+
+    #recommend-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #menu-display {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    #menu-display h2 {
+        font-size: 1.5rem;
+    }
+
+    #menu-display img {
+        width: 100%;
     }
 }
