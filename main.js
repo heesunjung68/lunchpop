@@ -2,62 +2,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const recommendButton = document.getElementById('recommend-button');
     const menuDisplay = document.getElementById('menu-display');
 
-    const menuItems = [
-        { name: 'Pizza', image: 'images/pizza.jpg' },
-        { name: 'Burger', image: 'images/burger.jpg' },
-        { name: 'Sushi', image: 'images/sushi.jpg' },
-        { name: 'Tacos', image: 'images/tacos.jpg' },
-        { name: 'Curry', image: 'images/curry.jpg' },
-        { name: 'Pasta', image: 'images/pasta.jpg' },
-        { name: 'Ramen', image: 'images/ramen.jpg' },
-        { name: 'Fried Chicken', image: 'images/fried_chicken.jpg' },
-        { name: 'Steak', image: 'images/steak.jpg' },
-        { name: 'Salad', image: 'images/salad.jpg' }
-    ];
+    if (recommendButton && menuDisplay) {
+        // Initial message to verify script execution and element visibility
+        menuDisplay.innerHTML = '<p>Script loaded. Ready to test recommendations!</p>';
+        menuDisplay.style.opacity = 1; // Ensure initial visibility
+        menuDisplay.style.transform = 'none'; // Remove any previous transform
 
-    function getRandomMenuItem() {
-        const randomIndex = Math.floor(Math.random() * menuItems.length);
-        return menuItems[randomIndex];
+        recommendButton.addEventListener('click', () => {
+            // Display static test content on button click
+            menuDisplay.innerHTML = '<h2>Test Recommendation!</h2><p>If you see this, the button click works!</p>';
+            menuDisplay.style.opacity = 1; // Ensure visibility
+            menuDisplay.style.transform = 'none'; // Reset transform
+        });
+    } else {
+        // Fallback for debugging if elements are not found
+        document.body.innerHTML += '<div style="color: red; text-align: center; margin-top: 50px;">' +
+                                  'ERROR: Essential elements (button or display area) not found. ' +
+                                  'Check IDs in index.html and main.js.' +
+                                  '</div>';
+        console.error('Critical: recommendButton or menuDisplay not found!');
     }
-
-    function displayRecommendation() {
-        // First, fade out and move away current content
-        menuDisplay.style.opacity = 0;
-        menuDisplay.style.transform = 'translateY(20px)';
-
-        // Use a short delay to allow fade-out to begin before clearing
-        setTimeout(() => {
-            menuDisplay.innerHTML = ''; // Clear existing content
-
-            const recommendedItem = getRandomMenuItem();
-
-            const menuName = document.createElement('h2');
-            menuName.textContent = recommendedItem.name;
-
-            const menuImage = document.createElement('img');
-            menuImage.src = recommendedItem.image;
-            menuImage.alt = `Image of ${recommendedItem.name}`;
-            menuImage.onerror = () => {
-                console.error('Image failed to load:', recommendedItem.image);
-                // Fallback image - you might want to create a generic fallback image
-                // menuImage.src = 'images/placeholder.jpg';
-            };
-
-            menuDisplay.appendChild(menuName);
-            menuDisplay.appendChild(menuImage);
-
-            // Use requestAnimationFrame to ensure reflow and then apply transition
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    menuDisplay.style.opacity = 1;
-                    menuDisplay.style.transform = 'translateY(0)';
-                });
-            });
-        }, 300); // Wait for half the transition duration (0.5s) to clear and new content to appear
-    }
-
-    // Initial display on page load
-    displayRecommendation();
-
-    recommendButton.addEventListener('click', displayRecommendation);
 });
