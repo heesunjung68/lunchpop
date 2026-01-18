@@ -1,51 +1,22 @@
-# Project Blueprint: Dinner Recommendation Website
+# Project Blueprint: English Dinner Menu Recommendation Website
 
 ## Overview
 
-This project is a simple, single-page web application that recommends a random dinner menu item from a predefined list of 20 options. The goal is to create a visually appealing and easy-to-use tool for users who can't decide what to eat.
+This project creates a simple, single-page web application that recommends a random English dinner menu item from a predefined list of 10 options. The website will display the recommended dish's name and an accompanying image. The application will be designed for a modern, visually appealing, and responsive user experience.
 
-## Design and Features
+## Detailed Outline
 
-### Implemented
-*   **Core Functionality:** Recommends a random dinner option upon a button click.
-*   **UI/UX:**
-    *   A central "Get Recommendation" button to trigger the action.
-    *   A display area for the recommended food's name and image.
-    *   Clean, modern, and mobile-responsive design.
-    *   A visually balanced layout with good spacing and typography.
-*   **Styling:**
-    *   **Color Palette:** A simple and clean palette.
-    *   **Typography:** Readable and modern fonts.
-    *   **Layout:** Centered content for focus.
-*   **Content:** A curated list of 20 common and representative food items. Initially used Unsplash URLs, then `placehold.co` for reliability. Now, images are served locally from the `images/` directory to ensure compatibility with GitHub Pages CSP.
+- **HTML (`index.html`):** Sets up the basic page structure, including a header, a display area for the recommended dish name and image, and a "Get New Recommendation" button.
+- **CSS (`style.css`):** Provides modern, visually appealing, and responsive styling for the user interface.
+- **JavaScript (`main.js`):** Contains the core logic. It will define an array of 10 English dinner menu items with their corresponding image paths (from the local `images/` directory), randomly select an item, and display its name and image on the page.
+- **Images:** Utilizes 10 selected images from the local `images/` directory to accompany the menu recommendations.
 
-## Current Task: Final Image Fix and Redeployment
+## Current Task: Implement and Deploy English Dinner Menu Recommendation Website
 
 ### Plan
-1.  **[Completed]** Establish project blueprint.
-2.  **[Completed]** Create the data structure for 20 food items with names and free-to-use image URLs in `main.js`.
-3.  **[Completed]** Set up the basic HTML structure in `index.html`.
-4.  **[Completed]** Style the application using `style.css` for a modern and clean look.
-5.  **[Completed]** Implement the core recommendation logic in `main.js`.
-6.  **[Completed]** Deploy to GitHub Pages (initial deployment).
-    *   **[Completed]** Initialize `package.json`.
-    *   **[Completed]** Install `gh-pages`.
-    *   **[Completed]** Add `deploy` script to `package.json`.
-    *   **[Completed]** Run `npm run deploy`.
-7.  **[Completed]** Fix image visibility issue (first attempt - `placehold.co`).
-    *   **[Completed]** Diagnosed Unsplash URLs were returning 404.
-    *   **[Completed]** Replaced all image URLs in `main.js` with stable `placehold.co` URLs.
-    *   **[Completed]** Updated `blueprint.md`.
-    *   **[Completed]** Re-deploy to GitHub Pages.
-8.  **[Completed]** Fix image visibility issue (second attempt - local images).
-    *   **[Completed]** Diagnosed `placehold.co` URLs were likely blocked by CSP.
-    *   **[Completed]** Created `images/` directory and simulated adding local image files.
-    *   **[Completed]** Updated `main.js` to use relative paths to local images.
-    *   **[Completed]** Updated `blueprint.md`.
-    *   **[Completed]** Re-deploy to GitHub Pages.
-9.  **[Completed]** Fix image visibility issue (third attempt - base tag for GitHub Pages project sites).
-    *   **[Completed]** Diagnosed issue likely due to incorrect base path for project sites.
-    *   **[Completed]** Added `<base>` tag to `index.html`.
-    *   **[Completed]** Updated `blueprint.md`.
-    *   **[Completed]** Re-deploy to GitHub Pages.
-10. **[In Progress]** Commit final changes (index.html, blueprint.md).
+1.  **Update `blueprint.md`**: Reflect the new project overview, detailed outline, and current plan for the English dinner menu recommendation website.
+2.  **Modify `index.html`**: Create the basic structure for the dinner recommendation site, including a title, a section to display the menu and image, and a button to get new recommendations.
+3.  **Update `style.css`**: Provide a modern, visually appealing, and responsive design for the website.
+4.  **Create/Modify `main.js`**: Implement the core logic: define an array of 10 English dinner menu items with their corresponding image paths, randomly select a menu item, and display it along with its image on the page.
+5.  **Ensure all necessary files are added and committed to the Git repository.**
+6.  **Provide instructions for deploying the site to GitHub Pages.**

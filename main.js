@@ -10,17 +10,7 @@ const foodItems = [
     { name: "Salad", image: "./images/salad.jpg" },
     { name: "Ramen", image: "./images/ramen.jpg" },
     { name: "Fried Chicken", image: "./images/fried_chicken.jpg" },
-    { name: "Curry", image: "./images/curry.jpg" },
-    { name: "Pho", image: "./images/pho.jpg" },
-    { name: "Bibimbap", image: "./images/bibimbap.jpg" },
-    { name: "Paella", image: "./images/paella.jpg" },
-    { name: "Fish and Chips", image: "./images/fish_and_chips.jpg" },
-    { name: "Dumplings", image: "./images/dumplings.jpg" },
-    { name: "Soup", image: "./images/soup.jpg" },
-    { name: "Sandwich", image: "./images/sandwich.jpg" },
-    { name: "Pancakes", image: "./images/pancakes.jpg" },
-    { name: "BBQ Ribs", image: "./images/bbq_ribs.jpg" },
-    { name: "Burrito", image: "./images/burrito.jpg" }
+    { name: "Curry", image: "./images/curry.jpg" }
 ];
 
 function getRandomFood() {
@@ -30,17 +20,16 @@ function getRandomFood() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const recommendButton = document.getElementById('recommendButton');
-    const recommendationResult = document.getElementById('recommendationResult');
+    const dishNameElement = document.getElementById('dishName');
+    const dishImageElement = document.getElementById('dishImage');
 
-    if (recommendButton && recommendationResult) {
+    if (recommendButton && dishNameElement && dishImageElement) {
         recommendButton.addEventListener('click', () => {
             const randomFood = getRandomFood();
-            recommendationResult.innerHTML = `
-                <div class="food-card">
-                    <h2>${randomFood.name}</h2>
-                    <img src="${randomFood.image}" alt="${randomFood.name}" />
-                </div>
-            `;
+            dishNameElement.textContent = randomFood.name;
+            dishImageElement.src = randomFood.image;
+            dishImageElement.alt = randomFood.name;
+            dishImageElement.style.display = 'block'; // Make image visible
         });
     }
 });
