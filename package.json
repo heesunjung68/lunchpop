@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "mkdir -p dist && cp index.html style.css main.js dist/",
+    "predeploy": "mkdir -p dist && cp index.html style.css main.js dist/ && cp -r images dist/",
     "deploy": "gh-pages -d dist"
   },
   "homepage": "https://heesunjung68.github.io/lunch-menu-generator",
