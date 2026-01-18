@@ -21,29 +21,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayRecommendation() {
-        // Clear previous content and hide before displaying new
-        menuDisplay.classList.remove('show');
-        menuDisplay.innerHTML = ''; // Clear existing content
+        // First, fade out and move away current content
+        menuDisplay.style.opacity = 0;
+        menuDisplay.style.transform = 'translateY(20px)';
 
-        const recommendedItem = getRandomMenuItem();
-
-        const menuName = document.createElement('h2');
-        menuName.textContent = recommendedItem.name;
-
-        const menuImage = document.createElement('img');
-        menuImage.src = recommendedItem.image;
-        menuImage.alt = `Image of ${recommendedItem.name}`;
-
-        menuDisplay.appendChild(menuName);
-        menuDisplay.appendChild(menuImage);
-
-        // Add class to trigger fade-in after content is added
+        // Use a short delay to allow fade-out to begin before clearing
         setTimeout(() => {
-            menuDisplay.classList.add('show');
-        }, 50); // Small delay to ensure class removal takes effect
+            menuDisplay.innerHTML = ''; // Clear existing content
+
+            const recommendedItem = getRandomMenuItem();
+
+            const menuName = document.createElement('h2');
+            menuName.textContent = recommendedItem.name;
+
+            const menuImage = document.createElement('img');
+            menuImage.src = recommendedItem.image;
+            menuImage.alt = `Image of ${recommendedItem.name}`;
+            menuImage.onerror = () => {
+                console.error('Image failed to load:', recommendedItem.image);
+                // Fallback image - you might want to create a generic fallback image
+                // menuImage.src = 'images/placeholder.jpg';
+            };
+
+            menuDisplay.appendChild(menuName);
+            menuDisplay.appendChild(menuImage);
+
+            // Use requestAnimationFrame to ensure reflow and then apply transition
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    menuDisplay.style.opacity = 1;
+                    menuDisplay.style.transform = 'translateY(0)';
+                });
+            });
+        }, 300); // Wait for half the transition duration (0.5s) to clear and new content to appear
     }
 
-    // Initial message or first recommendation
+    // Initial display on page load
     displayRecommendation();
 
     recommendButton.addEventListener('click', displayRecommendation);
