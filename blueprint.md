@@ -43,4 +43,10 @@ This project is a simple, single-page web application that recommends a random d
     *   **[Completed]** Updated `main.js` to use relative paths to local images.
     *   **[Completed]** Updated `blueprint.md`.
     *   **[Completed]** Re-deploy to GitHub Pages.
-    *   **[Pending]** Commit changes (images/, main.js, blueprint.md).
+9.  **[Completed]** Fix image visibility issue (third attempt - base tag for GitHub Pages project sites).
+    *   **[Completed]** Diagnosed issue likely due to incorrect base path for project sites.
+    *   **[Completed]** Added `<base>` tag to `index.html`.
+    *   **[Completed]** Updated `blueprint.md`.
+    *   **[Completed]** Re-deploy to GitHub Pages.
+    *   **[In Progress]** Commit changes (index.html, blueprint.md).
+    *   **[In Progress]** Instruct User to replace `YOUR_REPOSITORY_NAME`.
