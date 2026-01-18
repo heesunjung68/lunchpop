@@ -1,22 +1,30 @@
-# Project Blueprint
+# Project Blueprint: Dinner Recommendation Website
 
 ## Overview
 
-A web application that allows users to generate lottery numbers.
+This project is a simple, single-page web application that recommends a random dinner menu item from a predefined list of 20 options. The goal is to create a visually appealing and easy-to-use tool for users who can't decide what to eat.
 
-## Implemented Features
+## Design and Features
 
-*   **Initial version:** A Korean website that generates lotto numbers.
+### Implemented
+*   **Core Functionality:** Recommends a random dinner option upon a button click.
+*   **UI/UX:**
+    *   A central "Get Recommendation" button to trigger the action.
+    *   A display area for the recommended food's name and image.
+    *   Clean, modern, and mobile-responsive design.
+    *   A visually balanced layout with good spacing and typography.
+*   **Styling:**
+    *   **Color Palette:** A simple and clean palette.
+    *   **Typography:** Readable and modern fonts.
+    *   **Layout:** Centered content for focus.
+*   **Content:** A curated list of 20 common and representative food items, each with a royalty-free image.
 
-## Current Plan
+## Current Task: Initial Setup
 
-*   **Objective:** Internationalize the website to English and enhance the visual design.
-*   **Steps:**
-    1.  **Internationalization:**
-        *   Update `index.html` to use English for all user-facing text.
-    2.  **Visual Design:**
-        *   Enhance the visual appeal of the website by updating `style.css` with a more modern and vibrant design.
-        *   Ensure the generated lottery numbers are displayed in colorful, distinct balls.
-    3.  **Functionality:**
-        *   Implement the lottery number generation logic in `main.js`.
-        *   Use a Web Component for the lottery balls.
+### Plan
+1.  **[Completed]** Establish project blueprint.
+2.  **[Completed]** Create the data structure for 20 food items with names and free-to-use image URLs in `main.js`.
+3.  **[Completed]** Set up the basic HTML structure in `index.html`.
+4.  **[Completed]** Style the application using `style.css` for a modern and clean look.
+5.  **[Completed]** Implement the core recommendation logic in `main.js`.
+6.  **[In Progress]** Commit the final changes to the Git repository.
