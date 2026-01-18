@@ -47,16 +47,16 @@ class LunchMenu extends HTMLElement {
         this.shadowRoot.appendChild(wrapper);
 
         this.menus = [
-            { name: 'Bibimbap', image: 'images/bibimbap.jpg' },
-            { name: 'Paella', image: 'images/paella.jpg' },
-            { name: 'Pho', image: 'images/pho.jpg' },
-            { name: 'Fish and Chips', image: 'images/fish_and_chips.jpg' },
-            { name: 'Dumplings', image: 'images/dumplings.jpg' },
-            { name: 'Burrito', image: 'images/burrito.jpg' },
-            { name: 'Pancakes', image: 'images/pancakes.jpg' },
-            { name: 'BBQ Ribs', image: 'images/bbq_ribs.jpg' },
-            { name: 'Pizza', image: 'images/pizza.jpg' },
-            { name: 'Burger', image: 'images/burger.jpg' }
+            { name: 'Bibimbap', image: 'https://via.placeholder.com/200x200.png?text=Bibimbap' },
+            { name: 'Paella', image: 'https://via.placeholder.com/200x200.png?text=Paella' },
+            { name: 'Pho', image: 'https://via.placeholder.com/200x200.png?text=Pho' },
+            { name: 'Fish and Chips', image: 'https://via.placeholder.com/200x200.png?text=Fish+and+Chips' },
+            { name: 'Dumplings', image: 'https://via.placeholder.com/200x200.png?text=Dumplings' },
+            { name: 'Burrito', image: 'https://via.placeholder.com/200x200.png?text=Burrito' },
+            { name: 'Pancakes', image: 'https://via.placeholder.com/200x200.png?text=Pancakes' },
+            { name: 'BBQ Ribs', image: 'https://via.placeholder.com/200x200.png?text=BBQ+Ribs' },
+            { name: 'Pizza', image: 'https://via.placeholder.com/200x200.png?text=Pizza' },
+            { name: 'Burger', image: 'https://via.placeholder.com/200x200.png?text=Burger' }
         ];
     }
 
