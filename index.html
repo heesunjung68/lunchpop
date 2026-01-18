@@ -1,21 +1,64 @@
-22<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinner Recommender</title>
-    <base href="/productbuilder/">
+    <title>Dinner Menu Recommender</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>English Dinner Menu Recommender</h1>
-        <button id="recommendButton">Get Recommendation</button>
-        <div id="recommendationResult" class="food-display">
-            <h2 id="dishName">Click "Get Recommendation" for a delicious dinner idea!</h2>
-            <img id="dishImage" src="" alt="Recommended Dish" style="display:none;">
+    <header>
+        <h1>Dinner Menu Recommender</h1>
+        <p>Explore delicious global cuisines!</p>
+    </header>
+
+    <main id="menu-container">
+        <div class="menu-item">
+            <button>Pizza</button>
+            <img src="images/pizza.jpg" alt="Delicious Pizza">
         </div>
-    </div>
+        <div class="menu-item">
+            <button>Burger</button>
+            <img src="images/burger.jpg" alt="Juicy Burger">
+        </div>
+        <div class="menu-item">
+            <button>Sushi</button>
+            <img src="images/sushi.jpg" alt="Fresh Sushi">
+        </div>
+        <div class="menu-item">
+            <button>Tacos</button>
+            <img src="images/tacos.jpg" alt="Authentic Tacos">
+        </div>
+        <div class="menu-item">
+            <button>Curry</button>
+            <img src="images/curry.jpg" alt="Flavorful Curry">
+        </div>
+        <div class="menu-item">
+            <button>Pasta</button>
+            <img src="images/pasta.jpg" alt="Classic Pasta">
+        </div>
+        <div class="menu-item">
+            <button>Ramen</button>
+            <img src="images/ramen.jpg" alt="Hearty Ramen">
+        </div>
+        <div class="menu-item">
+            <button>Fried Chicken</button>
+            <img src="images/fried_chicken.jpg" alt="Crispy Fried Chicken">
+        </div>
+        <div class="menu-item">
+            <button>Steak</button>
+            <img src="images/steak.jpg" alt="Grilled Steak">
+        </div>
+        <div class="menu-item">
+            <button>Salad</button>
+            <img src="images/salad.jpg" alt="Healthy Salad">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dinner Menu Recommender</p>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
