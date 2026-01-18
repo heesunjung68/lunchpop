@@ -1,16 +1,16 @@
 // main.js
 
 const foodItems = [
-    { name: "Pizza", image: "./images/pizza.jpg" },
-    { name: "Burger", image: "./images/burger.jpg" },
-    { name: "Pasta", image: "./images/pasta.jpg" },
-    { name: "Sushi", image: "./images/sushi.jpg" },
-    { name: "Steak", image: "./images/steak.jpg" },
-    { name: "Tacos", image: "./images/tacos.jpg" },
-    { name: "Salad", image: "./images/salad.jpg" },
-    { name: "Ramen", image: "./images/ramen.jpg" },
-    { name: "Fried Chicken", image: "./images/fried_chicken.jpg" },
-    { name: "Curry", image: "./images/curry.jpg" }
+    { name: "Pizza", image: "./images/pizza.svg" },
+    { name: "Burger", image: "./images/burger.svg" },
+    { name: "Pasta", image: "./images/pasta.svg" },
+    { name: "Sushi", image: "./images/sushi.svg" },
+    { name: "Steak", image: "./images/steak.svg" },
+    { name: "Tacos", image: "./images/tacos.svg" },
+    { name: "Salad", image: "./images/salad.svg" },
+    { name: "Ramen", image: "./images/ramen.svg" },
+    { name: "Fried Chicken", image: "./images/fried_chicken.svg" },
+    { name: "Curry", image: "./images/curry.svg" }
 ];
 
 function getRandomFood() {
