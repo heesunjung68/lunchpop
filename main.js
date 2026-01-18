@@ -1,3 +1,6 @@
+const isGithubPages = location.hostname.includes('github.io');
+const basePath = isGithubPages ? '/lunch-menu-generator/' : './';
+
 class LunchMenu extends HTMLElement {
     constructor() {
         super();
@@ -47,16 +50,16 @@ class LunchMenu extends HTMLElement {
         this.shadowRoot.appendChild(wrapper);
 
         this.menus = [
-            { name: 'Bibimbap', image: 'images/bibimbap.jpg' },
-            { name: 'Paella', image: 'images/paella.jpg' },
-            { name: 'Pho', image: 'images/pho.jpg' },
-            { name: 'Fish and Chips', image: 'images/fish_and_chips.jpg' },
-            { name: 'Dumplings', image: 'images/dumplings.jpg' },
-            { name: 'Burrito', image: 'images/burrito.jpg' },
-            { name: 'Pancakes', image: 'images/pancakes.jpg' },
-            { name: 'BBQ Ribs', image: 'images/bbq_ribs.jpg' },
-            { name: 'Pizza', image: 'images/pizza.jpg' },
-            { name: 'Burger', image: 'images/burger.jpg' }
+            { name: 'Bibimbap', image: `${basePath}images/bibimbap.jpg` },
+            { name: 'Paella', image: `${basePath}images/paella.jpg` },
+            { name: 'Pho', image: `${basePath}images/pho.jpg` },
+            { name: 'Fish and Chips', image: `${basePath}images/fish_and_chips.jpg` },
+            { name: 'Dumplings', image: `${basePath}images/dumplings.jpg` },
+            { name: 'Burrito', image: `${basePath}images/burrito.jpg` },
+            { name: 'Pancakes', image: `${basePath}images/pancakes.jpg` },
+            { name: 'BBQ Ribs', image: `${basePath}images/bbq_ribs.jpg` },
+            { name: 'Pizza', image: `${basePath}images/pizza.jpg` },
+            { name: 'Burger', image: `${basePath}images/burger.jpg` }
         ];
     }
 
