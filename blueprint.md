@@ -27,4 +27,11 @@ This project is a simple, single-page web application that recommends a random d
 3.  **[Completed]** Set up the basic HTML structure in `index.html`.
 4.  **[Completed]** Style the application using `style.css` for a modern and clean look.
 5.  **[Completed]** Implement the core recommendation logic in `main.js`.
-6.  **[In Progress]** Commit the final changes to the Git repository.
+6.  **[In Progress]** Deploy to GitHub Pages.
+    *   **[Completed]** Initialize `package.json`.
+    *   **[Completed]** Install `gh-pages`.
+    *   **[Completed]** Add `deploy` script to `package.json`.
+    *   **[In Progress]** Update `blueprint.md`.
+    *   **[Pending]** Run `npm run deploy`.
+    *   **[Pending]** Provide GitHub Pages configuration instructions.
+    *   **[Pending]** Commit changes (package.json, package-lock.json).
