@@ -47,16 +47,16 @@ class LunchMenu extends HTMLElement {
         this.shadowRoot.appendChild(wrapper);
 
         this.menus = [
-            { name: 'Bibimbap', image: 'https://via.placeholder.com/200x200.png?text=Bibimbap' },
-            { name: 'Paella', image: 'https://via.placeholder.com/200x200.png?text=Paella' },
-            { name: 'Pho', image: 'https://via.placeholder.com/200x200.png?text=Pho' },
-            { name: 'Fish and Chips', image: 'https://via.placeholder.com/200x200.png?text=Fish+and+Chips' },
-            { name: 'Dumplings', image: 'https://via.placeholder.com/200x200.png?text=Dumplings' },
-            { name: 'Burrito', image: 'https://via.placeholder.com/200x200.png?text=Burrito' },
-            { name: 'Pancakes', image: 'https://via.placeholder.com/200x200.png?text=Pancakes' },
-            { name: 'BBQ Ribs', image: 'https://via.placeholder.com/200x200.png?text=BBQ+Ribs' },
-            { name: 'Pizza', image: 'https://via.placeholder.com/200x200.png?text=Pizza' },
-            { name: 'Burger', image: 'https://via.placeholder.com/200x200.png?text=Burger' }
+            { name: 'Burger', image: 'images/burger.svg' },
+            { name: 'Curry', image: 'images/curry.svg' },
+            { name: 'Fried Chicken', image: 'images/fried_chicken.svg' },
+            { name: 'Pasta', image: 'images/pasta.svg' },
+            { name: 'Pizza', image: 'images/pizza.svg' },
+            { name: 'Ramen', image: 'images/ramen.svg' },
+            { name: 'Salad', image: 'images/salad.svg' },
+            { name: 'Steak', image: 'images/steak.svg' },
+            { name: 'Sushi', image: 'images/sushi.svg' },
+            { name: 'Tacos', image: 'images/tacos.svg' }
         ];
     }
 
@@ -68,7 +68,10 @@ class LunchMenu extends HTMLElement {
         menuDisplay.textContent = selectedMenu.name;
 
         const image = this.shadowRoot.querySelector('#food-image');
-        image.src = selectedMenu.image;
+        
+        const baseUrl = window.location.href.replace(/[^/]*$/, '');
+        image.src = new URL(selectedMenu.image, baseUrl).href;
+        
         image.setAttribute('style', 'display: block;');
     }
 }
