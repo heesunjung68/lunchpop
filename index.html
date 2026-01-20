@@ -12,6 +12,7 @@
 <body>
     <div class="container">
         <h1>What's for Lunch?</h1>
+        <p class="description">Can't decide what to eat? Let our Lunch Menu Generator help you! Click the button below to get a delicious random meal suggestion.</p>
         <button id="generateMenuBtn">Generate Menu</button>
         <p id="menuDisplay"></p>
         <img id="menuImage" src="" alt="Lunch Menu Image" style="max-width: 100%; border-radius: 8px; margin-top: 20px;">
@@ -35,6 +36,7 @@
 
     <div class="container classifier-container">
         <h1>Dog/Cat Image Classifier</h1>
+        <p class="description">Upload an image of your furry friend to find out if it's a dog or a cat! Our AI model will predict the animal with a probability score.</p>
         <input type="file" id="imageUpload" accept="image/*" onchange="handleImageUpload(event)">
         <img id="previewImage" src="#" alt="Image preview" style="max-width: 300px; max-height: 300px; display: none;">
         <button type="button" onclick="predictFile()" disabled>Predict</button>
@@ -63,5 +65,14 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
+
+    <footer class="footer-container">
+        <p>&copy; 2024 Your Site Name. All rights reserved.</p>
+        <p>
+            <a href="/privacy-policy.html">Privacy Policy</a> |
+            <a href="/terms-of-service.html">Terms of Service</a> |
+            <a href="/contact.html">Contact Us</a>
+        </p>
+    </footer>
 </body>
 </html>
