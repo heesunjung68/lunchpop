@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lunch Menu Generator</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Teachable Machine scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -51,6 +54,14 @@
             })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    <div class="container classifier-container">
+        <h1>Dog/Cat Image Classifier</h1>
+        <input type="file" id="imageUpload" accept="image/*" onchange="handleImageUpload(event)">
+        <img id="previewImage" src="#" alt="Image preview" style="max-width: 300px; max-height: 300px; display: none;">
+        <button type="button" onclick="predictFile()" disabled>Predict</button>
+        <div id="label-container"></div>
     </div>
 </body>
 </html>

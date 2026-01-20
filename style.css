@@ -118,3 +118,52 @@ button:hover {
 .affiliate-form-container button[type="submit"]:hover {
     background-color: #218838;
 }
+
+/* New styles for the Image Classifier */
+.classifier-container {
+    margin-top: 30px; /* Add some space above the classifier section */
+}
+
+.classifier-container input[type="file"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Account for padding and border */
+    box-sizing: border-box;
+}
+
+.classifier-container img#previewImage {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+.classifier-container button {
+    margin-top: 20px;
+}
+
+.classifier-container button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.classifier-container button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+#label-container {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+#label-container div {
+    margin-bottom: 8px;
+    padding: 5px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
