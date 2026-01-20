@@ -37,7 +37,8 @@
     <div class="container classifier-container">
         <h1>Dog/Cat Image Classifier</h1>
         <p class="description">Upload an image of your furry friend to find out if it's a dog or a cat! Our AI model will predict the animal with a probability score.</p>
-        <input type="file" id="imageUpload" accept="image/*" onchange="handleImageUpload(event)">
+        <label for="imageUpload" class="custom-file-upload">Choose File</label>
+        <input type="file" id="imageUpload" accept="image/*" onchange="handleImageUpload(event)" style="display: none;">
         <img id="previewImage" src="#" alt="Image preview" style="max-width: 300px; max-height: 300px; display: none;">
         <button type="button" onclick="predictFile()" disabled>Predict</button>
         <div id="label-container"></div>

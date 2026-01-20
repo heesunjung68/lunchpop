@@ -48,17 +48,19 @@ A web application that combines a random lunch menu generator, an affiliate inqu
 
 ## Current Plan for Requested Change
 
-The current task is to make the website more suitable for Google AdSense registration by adding more descriptive content and essential legal/contact information.
+The current task is to modify the "Dog/Cat Image Classifier" section to use English text for the file input and ensure it is visually centered, as well as to enhance the overall site for Google AdSense eligibility.
 
 ### Steps Taken:
 
-1.  **Modified `index.html`**:
+1.  **Modified `index.html` (for AdSense & File Input)**:
     *   Added a descriptive paragraph under the "What's for Lunch?" heading.
     *   Added a descriptive paragraph under the "Dog/Cat Image Classifier" heading.
     *   Added a `<footer>` section after the Disqus container, containing placeholder links for "Privacy Policy", "Terms of Service", and "Contact Us".
-2.  **Modified `style.css`**:
+    *   **Replaced the `<input type="file">` in the image classifier with a hidden input and a `<label>` element styled as a custom button with the text "Choose File" to allow for English translation and better centering.**
+2.  **Modified `style.css` (for AdSense & File Input)**:
     *   Added styling for the new `.description` class to format the descriptive paragraphs.
     *   Added styling for the `.footer-container` to style the site footer.
+    *   **Added styling for `.custom-file-upload` to visually represent the file input button and ensure it is centered.**
 
 ## GitHub Pages Deployment Instructions
 
