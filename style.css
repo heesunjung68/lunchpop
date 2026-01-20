@@ -7,6 +7,8 @@ body {
     margin: 0;
     background-color: #f4f4f4;
     color: #333;
+    flex-direction: column; /* Allow stacking of containers */
+    gap: 30px; /* Space between containers */
 }
 
 .container {
@@ -55,4 +57,64 @@ button:hover {
     display: block; /* Ensures the image takes its own line */
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Affiliate Form Specific Styles */
+.affiliate-form-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.affiliate-form-container h2 {
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.affiliate-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.affiliate-form-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.affiliate-form-container input[type="text"],
+.affiliate-form-container input[type="email"],
+.affiliate-form-container textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.affiliate-form-container input[type="text"]:focus,
+.affiliate-form-container input[type="email"]:focus,
+.affiliate-form-container textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.affiliate-form-container button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Center the submit button */
+    width: auto;
+    margin-top: 10px;
+}
+
+.affiliate-form-container button[type="submit"]:hover {
+    background-color: #218838;
 }
